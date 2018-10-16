@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<text class="body-view">店小二正在进货中</text>
+</view>
+
