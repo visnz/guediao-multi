@@ -1,0 +1,1 @@
+cmd_Release/EmpireTycoon.node := ln -f "Release/obj.target/EmpireTycoon.node" "Release/EmpireTycoon.node" 2>/dev/null || (rm -rf "Release/EmpireTycoon.node" && cp -af "Release/obj.target/EmpireTycoon.node" "Release/EmpireTycoon.node")

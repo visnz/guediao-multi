@@ -1,0 +1,1 @@
+cmd_Release/obj.target/EmpireTycoon.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=EmpireTycoon.node -o Release/obj.target/EmpireTycoon.node -Wl,--start-group Release/obj.target/EmpireTycoon/EmpireTycoon.o -Wl,--end-group 
