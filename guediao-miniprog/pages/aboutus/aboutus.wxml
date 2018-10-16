@@ -2,10 +2,10 @@
 <import src="/pages/common/template.wxml" />
 <view class="container">
 
- <template is="head" data="{{title: '粿条青年'}}"/>
+ <template is="head" data="{{title}}"/>
 
   <view class='userinfo'>
-    <image src='/image/白底-01.jpg' class='userinfo-avatar' mode="aspectFill" />
+    <image src='{{logosrc}}' class='userinfo-avatar' mode="aspectFill" />
   </view>
 
   <view class="block">
@@ -14,9 +14,14 @@
   <view class="block">
     <text class="title">联系我们</text>
   </view>
+
   <view class='body-view'>
-      <map longitude='116.634546' latitude='23.669191' markers="{{markers}}"></map>
+    <view wx:for="{{locations}}">
+      <map longitude='{{item.longt}}' latitude='{{item.latit}}' markers="{{item.markers}}"></map>
+      <button id="{{index}}" type='primary' bindtap="gotoLo" class="button-me">{{goto}}{{item.name}}</button>
+    </view>
   </view>
+
   <view class="block">
     <text  class="title">支持我们</text>
   </view>

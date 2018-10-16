@@ -20,7 +20,7 @@
   text-align: center;
 }
 .page-head-title{
-  letter-spacing: 1rpx
+  letter-spacing: 1rpx;
   display: inline-block;
   padding: 0 40rpx 20rpx 40rpx;
   font-size: 32rpx;
@@ -36,4 +36,27 @@
   padding-top: 20rpx;
   color: #9B9B9B;
   font-size: 32rpx;
+}
+
+.button-me{
+  margin: 15rpx;
+  font-size:28rpx;
+}
+.map-me{
+  margin:20rpx
+}
+.block{
+ margin: 10px;
+ text-align: left;
+ font-size: 18px;
+}
+.title{
+  text-align: center;
+  color:#8a8a8a;
+  font-size: 28rpx;
+  letter-spacing:1rpx;
+  font-weight:normal;
+  margin: 15rpx;
+  border-bottom: 1rpx solid #D8D8D8;
+  padding: 0 60rpx 10rpx 60rpx
 }

@@ -1,13 +1,30 @@
 // pages/aboutus/aboutus.js
+var origindata = require("../../data/datarouter.js").getData()
 Page({
-
+ data:{
+  title: origindata.basicinfo.orgname,
+  goto:" 点击前往 ",
+  locations: origindata.locations,
+  logosrc: origindata.basicinfo.logosrc,
+ },
   /**
    * 页面的初始数据
-   */
-  data: {
+  },*/
 
+  gotoLo: e =>{
+    var index = e.currentTarget.id
+    wx.getLocation({//获取当前经纬度
+      type: 'wgs84',
+      success: function (res) {
+        wx.openLocation({
+          latitude: locations[index].latit,
+          longitude: locations[index].longt,
+          name: locations[index].name,
+          address: locations[index].address
+        })
+      }
+    })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
