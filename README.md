@@ -1,46 +1,5 @@
-# guediaobot
-## Guediaobot机器人需求
-[开发文档](https://wxpy.readthedocs.io/zh/latest/index.html)
-[github项目](https://github.com/youfou/wxpy)
-- 基本API构建
-  - [ ] 信息抓取、过滤
-  - [ ] 构建事务对象
-  - [ ] 构建回复的抽象逻辑
-  - [ ] 业务模块构建
-- 业务模块
-  - [ ] 项目进度跟踪
-    - [ ] 创建、记录项目
-    - [ ] 随时可以调用访问
-    - [ ] 随时可以添加新的记录
-  - [ ] 事务提醒
-    - [ ] 如设置开会等时间项目，设置由机器人自动提醒执行
-    - [ ] 定期事务，如每周例会的提前提醒
-  - [ ] 记账功能
-    - [ ] 将单条数据计入数据库
-    - [ ] 定期结算、简单审计
-  - [ ] 维罗妮卡
-- 运维
-  - [ ] 用户认证，lastlogin等
-  - [ ] 允许自定义视图进行添加、修改、删除事务
-  - [x] 心跳包
-  - [ ] logger-转播
-  - [ ] 持久化数据存储
-  - [ ] 宕机重启自动化部署
-- 其他
-  - [ ] 监控服务器内容报告
-  - [ ] 接入[聊天机器人](http://www.tuling123.com/)
-  - [ ] 离线下载
-  - [ ] 内置游戏
-  - [ ] bilibili更新提醒
-  - [ ] 今晚吃啥
-
-- 事务类型抽象
-  - 交互事件
-    - 临时交互事件（优先匹配）
-  - 定时提醒事件
-- 架构设想
-  - wxapi接入-代理函数-核心业务接口
-  - 核心业务core模块、核心业务部署模块、交互模块
-  - 数据持久化、配置模块、logger模块
-  - 外部接口接入模块
-  - 数据统计与分析模块
+# Guediao Studio Projects Lab
+## [Guediao Bot for Wechat](./guediao-bot/)
+Guediao Bot by using [wxpy](https://github.com/youfou/wxpy), to build up simple function of session 
+## [Guediao Miniprogram Project](./guediao-miniprog/)
+Guediao Miniprogram of Wechat
