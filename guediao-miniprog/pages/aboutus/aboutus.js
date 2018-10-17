@@ -13,16 +13,11 @@ Page({
 
   gotoLo: e =>{
     var index = e.currentTarget.id
-    wx.getLocation({//获取当前经纬度
-      type: 'wgs84',
-      success: function (res) {
-        wx.openLocation({
-          latitude: origindata.locations[index].latit,
-          longitude: origindata.locations[index].longt,
-          name: origindata.locations[index].name,
-          address: origindata.locations[index].address
-        })
-      }
+    wx.openLocation({
+      latitude: origindata.locations[index].latit,
+      longitude: origindata.locations[index].longt,
+      name: origindata.locations[index].name,
+      address: origindata.locations[index].address
     })
   },
   /**

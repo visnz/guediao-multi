@@ -47,8 +47,8 @@
 }
 .block{
  margin: 10px;
- text-align: left;
- font-size: 18px;
+ text-align: center;
+ align-items: center;
 }
 .title{
   text-align: center;
@@ -59,4 +59,34 @@
   margin: 15rpx;
   border-bottom: 1rpx solid #D8D8D8;
   padding: 0 60rpx 10rpx 60rpx
+}
+.title-mini{
+  text-align: center;
+  color:#aaa;
+  font-size: 22rpx;
+  letter-spacing:1rpx;
+  font-weight:normal;
+  margin: 12rpx 20rpx 12rpx 20rpx;
+  border-bottom: 1rpx solid #D8D8D8;
+  padding: 0 60rpx 10rpx 60rpx
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
 }
