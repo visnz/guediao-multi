@@ -1,5 +1,5 @@
 // pages/aboutus/aboutus.js
-var origindata = require("../../data/datarouter.js").getData()
+const origindata = require("../../data/datarouter.js").getData()
 Page({
  data:{
   title: origindata.basicinfo.orgname,
@@ -17,10 +17,10 @@ Page({
       type: 'wgs84',
       success: function (res) {
         wx.openLocation({
-          latitude: locations[index].latit,
-          longitude: locations[index].longt,
-          name: locations[index].name,
-          address: locations[index].address
+          latitude: origindata.locations[index].latit,
+          longitude: origindata.locations[index].longt,
+          name: origindata.locations[index].name,
+          address: origindata.locations[index].address
         })
       }
     })
