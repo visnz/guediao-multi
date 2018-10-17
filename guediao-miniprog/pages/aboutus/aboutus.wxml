@@ -16,22 +16,32 @@
   </view>
   <view class="block">
     <text class="title">联系我们</text>
-  </view>
-
-  <view class='block'>
-  <text class="title-mini">找到我们</text>
-
-  <view class='block'>
-    <view wx:for="{{locations}}">
-
-      <view class='block'>
-        <map longitude='{{item.longt}}' latitude='{{item.latit}}' markers="{{item.markers}}"></map>
+      <view class="block">
+        <text class="title-mini">商务合作</text>
       </view>
-      <button id="{{index}}" type='primary' bindtap="gotoLo" class="button-me">{{goto}}{{item.name}}</button>
+    <view class="block-left">
+      <view class="contact-me">
+       <view wx:for="{{contactInfoList}}" class="contact-item" >
+        <image class="contact-image" src="{{item.icon}}"  />
+        <text id="contact{{index}}" class="contact-content{{item.linkable}}" selectable="true" bindtap="{{item.call}}" >{{item.content}}</text>
+       </view>
+      </view>
+    </view>
+
+    <view class='block'>
+    <text class="title-mini">找到我们</text>
+
+    <view class='block'>
+      <view wx:for="{{locations}}">
+
+        <view class='block'>
+          <map longitude='{{item.longt}}' latitude='{{item.latit}}' markers="{{item.markers}}"></map>
+        </view>
+        <button id="{{index}}" type='primary' bindtap="gotoLo" class="button-me">{{goto}}{{item.name}}</button>
+      </view>
+    </view>
     </view>
   </view>
-  </view>
-
   <view class="block">
     <text  class="title">支持我们</text>
   </view>

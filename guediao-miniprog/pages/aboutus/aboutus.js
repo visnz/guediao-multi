@@ -6,6 +6,7 @@ Page({
   goto:" 点击前往 ",
   locations: origindata.locations,
   logosrc: origindata.basicinfo.logosrc,
+  contactInfoList: origindata.basicinfo.contact_me,
  },
   /**
    * 页面的初始数据
@@ -18,6 +19,29 @@ Page({
       longitude: origindata.locations[index].longt,
       name: origindata.locations[index].name,
       address: origindata.locations[index].address
+    })
+  },
+  none: e=>{ return 1; },
+  call: e=>{
+    var phoneNumber = origindata.basicinfo.contact_me[(e.currentTarget.id).split("contact")[1]].content;
+    wx.makePhoneCall({
+      phoneNumber: phoneNumber,
+    })
+  },
+  email: e=>{
+    var email = origindata.basicinfo.contact_me[(e.currentTarget.id).split("contact")[1]].content;
+    wx.setClipboardData({
+      data:email,
+      success:()=>{
+        wx.showToast({
+          title:"复制成功"
+        })
+      },
+      fail:()=>{
+        wx.showToast({
+          title: "复制失败"
+        })
+      }
     })
   },
   /**
