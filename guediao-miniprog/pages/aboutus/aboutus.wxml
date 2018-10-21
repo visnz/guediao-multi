@@ -1,18 +1,26 @@
 <!--pages/aboutus/aboutus.wxml-->
 <import src="/pages/common/template.wxml" />
 <view class="container">
-
- <template is="head" data="{{title}}"/>
-
+  <template is="head" data="{{title}}"/>
   <view class='userinfo'>
     <image src='{{logosrc}}' class='userinfo-avatar' mode="aspectFill" />
   </view>
-
   <view class="block">
     <text class="title">关于我们</text>
     <view class="block">
       <text class="title-mini">我们是谁</text>
     </view>
+  </view>
+  <view class="block">
+    <text class="title-mini">了解更多</text>
+      <view class="block">
+          <view class="qrcode-title">
+            <text >粿条青年公众号</text>
+          </view>
+        <image id="{{OAQRCodeSrc}}" class="qrcode" src="{{OAQRCodeSrc}}" bindtap="imagetouch" />
+      </view>
+      <view class="block">
+      </view>
   </view>
   <view class="block">
     <text class="title">联系我们</text>
@@ -21,25 +29,29 @@
       </view>
     <view class="block-left">
       <view class="contact-me">
-       <view wx:for="{{contactInfoList}}" class="contact-item" >
-        <image class="contact-image" src="{{item.icon}}"  />
-        <text id="contact{{index}}" class="contact-content{{item.linkable}}" selectable="true" bindtap="{{item.call}}" >{{item.content}}</text>
-       </view>
+        <view wx:for="{{contactInfoList}}" class="contact-item" >
+          <image class="contact-image" src="{{item.icon}}"  />
+          <text id="contact{{index}}" class="contact-content{{item.linkable}}" selectable="true" bindtap="{{item.call}}" >{{item.content}}</text>
+        </view>
       </view>
     </view>
-
     <view class='block'>
-    <text class="title-mini">找到我们</text>
+      <view class="qrcode-title">
+        <text >李先生</text>
+      </view>
+      <image class="qrcode" id="{{contactMeQrcodeSrc}}" src="{{contactMeQrcodeSrc}}" bindtap="imagetouch"/>
+    </view>
+  </view>
 
+  <view class='block'>
+    <text class="title-mini">找到我们</text>
     <view class='block'>
       <view wx:for="{{locations}}">
-
         <view class='block'>
           <map longitude='{{item.longt}}' latitude='{{item.latit}}' markers="{{item.markers}}"></map>
         </view>
         <button id="{{index}}" type='primary' bindtap="gotoLo" class="button-me">{{goto}}{{item.name}}</button>
       </view>
-    </view>
     </view>
   </view>
   <view class="block">

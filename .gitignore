@@ -1,4 +1,4 @@
 guediao-bot/tempfile
 guediao-miniprog/data/coredata.js
 .idea/
-.DS_Store
+*.DS_Store

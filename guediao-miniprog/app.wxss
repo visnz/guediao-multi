@@ -129,3 +129,16 @@
   margin-right: 10rpx;
   color:#66f
 }
+.qrcode{
+  width:300rpx;
+  height:300rpx;
+  margin:10rpx 80rpx 10rpx 80rpx ;
+}
+.qrcode-title{
+  text-align: center;
+  font-size: 20rpx;
+  letter-spacing: 1rpx;
+  color:#888;
+  padding:6rpx;
+  margin-top:30rpx;
+}

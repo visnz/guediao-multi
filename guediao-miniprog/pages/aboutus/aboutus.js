@@ -6,7 +6,10 @@ Page({
   goto:" 点击前往 ",
   locations: origindata.locations,
   logosrc: origindata.basicinfo.logosrc,
-  contactInfoList: origindata.basicinfo.contact_me,
+  contactInfoList: origindata.basicinfo.contactMe,
+  OAQRCodeSrc: origindata.basicinfo.OAQrcodeSrc,
+  contactMeQrcodeSrc:origindata.basicinfo.contactMeQrcodeSrc,
+
  },
   /**
    * 页面的初始数据
@@ -39,9 +42,30 @@ Page({
       },
       fail:()=>{
         wx.showToast({
-          title: "复制失败"
+          title: "复制失败",
+          icon:"loading"
         })
       }
+    })
+  },
+  imagetouch:e=>{
+    var eid=e.currentTarget.id
+    wx.showActionSheet({
+      itemList: ["保存到本地相册","识别二维码"],
+      itemColor: '#007aff',
+      success: function(res) {
+        switch(res.tapIndex){
+          case 0:{
+            console.log("touch0")
+          }case 1:{
+            console.log("touch1")
+          }default:{
+
+          }
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
   /**
